@@ -3,17 +3,16 @@ package com.jeanandroid.somamvp;
 public interface MVP {
 
     interface ModelInterface{
-        public void retrieveMotos();
-//        public void updateEhFavoritoMoto( Moto moto );
+        void somarValores( int valorUm, int valorDois );
     }
 
     interface PresenterInterface{
-        public void showToast( String mensagem );
-        public void setView( MVP.ViewInterface view );
+        void setView( MVP.ViewInterface view );
+        void getSoma( String valorUm, String valorDois );
+        void callbackSoma(String resultado);
     }
 
     interface ViewInterface{
-        public void showToast( String mensagem );
-
+        void showToast( String mensagem );
     }
 }

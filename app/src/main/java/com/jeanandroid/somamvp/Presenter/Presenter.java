@@ -1,25 +1,32 @@
 package com.jeanandroid.somamvp.Presenter;
 
-import android.os.Bundle;
-
 import com.jeanandroid.somamvp.MVP;
+import com.jeanandroid.somamvp.Model.SomaModel;
 
 public class Presenter implements MVP.PresenterInterface{
 
     private MVP.ViewInterface view;
+    private MVP.ModelInterface model;
 
-    @Override
-    public void retrieveMotos(Bundle savedInstanceState) {
-
+    //construtor do presenter cria a instancia do model
+    public Presenter(){
+        model = new SomaModel( this );
     }
 
+    //nesse momento possuo a referencia da view que estou manipulando (tela inteira)
     @Override
     public void setView(MVP.ViewInterface view) {
+        this.view = view;
+    }
 
+    //esse metodo chama o model pedindo o resultado da soma, depois pego o resultado e atualizo a view
+    @Override
+    public void getSoma(String valorUm, String valorDois) {
+        model.somarValores(Integer.valueOf(valorUm), Integer.valueOf(valorDois) )  ;
     }
 
     @Override
-    public void showToast(String mensagem) {
-        view.showToast( mensagem );
+    public void callbackSoma(String resultado) {
+        view.showToast(resultado);
     }
 }
