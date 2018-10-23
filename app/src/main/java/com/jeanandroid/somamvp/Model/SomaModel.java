@@ -7,6 +7,7 @@ public class SomaModel implements MVP.ModelInterface{
 
     private MVP.PresenterInterface presenter ;
 
+    //tenho a instancia do presenter no momento da construcao do model
     public SomaModel(Presenter presenter) {
         this.presenter = presenter;
     }

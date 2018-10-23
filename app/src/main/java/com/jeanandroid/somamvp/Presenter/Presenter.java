@@ -25,6 +25,7 @@ public class Presenter implements MVP.PresenterInterface{
         model.somarValores(Integer.valueOf(valorUm), Integer.valueOf(valorDois) )  ;
     }
 
+    //esse metodo e chamado pelo modelo, ele so e chamado depois que a soma e feita, esse metodo atualiza a view
     @Override
     public void callbackSoma(String resultado) {
         view.showToast(resultado);
