@@ -9,7 +9,7 @@ public interface MVP {
 
     interface PresenterInterface{
         void setView( MVP.ViewInterface view );
-        void getSoma( String valorUm, String valorDois );
+        // void getSoma( String valorUm, String valorDois );
         void verificaValor(String valorUm, String valorDois); 
         void callbackSoma(String resultado);
         void callbackVerifica(String resutVerifica);
