@@ -20,10 +20,10 @@ public class Presenter implements MVP.PresenterInterface{
     }
 
     //esse metodo chama o model pedindo o resultado da soma, depois pego o resultado e atualizo a view
-    @Override
-    public void getSoma(String valorUm, String valorDois) {
-        model.somarValores(Integer.valueOf(valorUm), Integer.valueOf(valorDois) )  ;
-    }
+    // @Override
+    // public void getSoma(String valorUm, String valorDois) {
+    //     model.somarValores(Integer.valueOf(valorUm), Integer.valueOf(valorDois) )  ;
+    // }
     //nessa função o presenter manda para o model os valores para verificar se tem algo vazio.
     @Override
     public void verificaValor(String valorUm, String valorDois) {
