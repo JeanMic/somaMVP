@@ -25,6 +25,15 @@ public class Presenter implements MVP.PresenterInterface{
         model.somarValores(Integer.valueOf(valorUm), Integer.valueOf(valorDois) )  ;
     }
 
+    public void verificaValor(String valorUm, String valorDois) {
+        model.verificaValor(valorUm,valorDois);
+    }
+
+    @Override
+    public void callbackVerifica(String resutVerifica){
+        view.showToast(resutVerifica);
+    }
+
     @Override
     public void callbackSoma(String resultado) {
         view.showToast(resultado);
