@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements MVP.ViewInterface
 
     //chama o metodo no presenter, esse metodo foi declarado na interface do presenter
     public void somar(View view){
-        presenter.getSoma(viewValorUm.getText().toString(), viewValorDois.getText().toString());
+        presenter.verificaValor(viewValorUm.getText().toString(), viewValorDois.getText().toString());
     }
 
     //resgate dos IDs da view, nada de MVP aqui
