@@ -24,11 +24,12 @@ public class Presenter implements MVP.PresenterInterface{
     public void getSoma(String valorUm, String valorDois) {
         model.somarValores(Integer.valueOf(valorUm), Integer.valueOf(valorDois) )  ;
     }
-
+    //nessa função o presenter manda para o model os valores para verificar se tem algo vazio.
+    @Override
     public void verificaValor(String valorUm, String valorDois) {
         model.verificaValor(valorUm,valorDois);
     }
-
+    //aqui é onde retorna o mensagem de verificação pra view
     @Override
     public void callbackVerifica(String resutVerifica){
         view.showToast(resutVerifica);

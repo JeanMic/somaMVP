@@ -16,7 +16,8 @@ public class SomaModel implements MVP.ModelInterface{
     public void somarValores(int valorUm, int valorDois) {
         presenter.callbackSoma(String.valueOf(valorUm + valorDois));
     }
-
+    //nessa função verifica se tem algum valor vazio, caso tenha o metodo callbackVerifica 
+    //do presenter é chamado com a mensagem de verificação
     @Override
     public void verificaValor(String valorUm, String valorDois) {
         if ( valorUm.isEmpty() || valorDois.isEmpty() ){
